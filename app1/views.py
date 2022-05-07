@@ -3,5 +3,5 @@ from django.http import HttpResponse
 # Create your views here.
 def home(request):
     return render(request, 'productPage.html');
-def sell(request):
+def login(request):
     return render(request, 'login_page.html');
