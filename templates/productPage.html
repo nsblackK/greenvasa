@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -40,7 +41,7 @@
         <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #054D41;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="logo.png" alt="img" style="max-width: 100px; max-height: 50px"></img></a>
+                    <img src="{% static '/images/logo.png' %}" alt="img" style="max-width: 100px; max-height: 50px"></img></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -51,7 +52,6 @@
                                 <option value="Laptops">Laptops</option>
                                 <option value="clothes">clothes</option>
                                 <option value="automobiles">automobiles</option>
-                                <option value="hobbies">hobbies</option>
                               </select>
 
                 <div class="collapse navbar-collapse" id="mynavbar">
@@ -62,25 +62,28 @@
                                 style="color: rgb(102, 101, 101); height: 20px;">
                             </span>
                         </button>
+
                     </form>
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
+                       <li class="nav-item">
                             <h4 class="nav-link" href="javascript:void(0)">Sell</h4>
                         </li>
+
                         <li class="nav-item">
                             <h4 class="nav-link" href="javascript:void(0)">Buy</h4>
                         </li>
-                        <li class="nav-item">
+                        <form action="login">
+
+                            <button><li class="nav-item">
                             <h4 class="nav-link" href="javascript:void(0)">Log In</h4>
-                        </li>
+
+                        </li></button>
+                        </form>
                         <li class="nav-item">
                             <h4 class="nav-link" href="javascript:void(0)">About Us</h4>
                         </li>
-                        <li class="nav-item">
-                            <h4 class="nav-link" href="javascript:void(0)">Log In</h4>
-                        </li>
                     </ul>
-                    <img src="christ.png" alt="img" style="max-width: 100px; max-height: 50px"></img></a>
+                    <img src="{% static '/images/chr.png' %}" alt="img" style="max-width: 100px; max-height: 50px"></img></a>
                 </div>
             </div>
         </nav>
