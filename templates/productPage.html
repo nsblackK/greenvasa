@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-{% extends 'base.html' %}
-{% block content %}
+{% load static %}
 <html lang="en">
 
 <head>
@@ -42,7 +41,7 @@
         <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #054D41;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="logo.png" alt="img" style="max-width: 100px; max-height: 50px"></img></a>
+                    <img src="{% static '/images/logo.png' %}" alt="img" style="max-width: 100px; max-height: 50px"></img></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -84,7 +83,7 @@
                             <h4 class="nav-link" href="javascript:void(0)">About Us</h4>
                         </li>
                     </ul>
-                    <img src="christ.png" alt="img" style="max-width: 100px; max-height: 50px"></img></a>
+                    <img src="{% static '/images/chr.png' %}" alt="img" style="max-width: 100px; max-height: 50px"></img></a>
                 </div>
             </div>
         </nav>
@@ -185,4 +184,3 @@
 </body>
 
 </html>
-{% endblock %}
