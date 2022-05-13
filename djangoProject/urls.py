@@ -23,6 +23,7 @@ from djangoProject import settings
 
 urlpatterns = [
     path('', include('login.urls')),
+    path('sales', include('app1.urls')),
     path('admin/', admin.site.urls),
     
 ]

@@ -22,3 +22,9 @@ def resetpwd(request):
 
 def changepwd(request):
   return render(request,'change_password.html')
+
+
+def sell(request):
+    return render(request, 'sales_page.html');
+def description(request):
+    return render(request, 'new_product_desc.html');
