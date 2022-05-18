@@ -20,11 +20,17 @@ from djangoProject.settings import STATIC_URL
 from login import views as login_views
 from django.contrib.auth import views as auth
 from djangoProject import settings
+from login import views as user_view
+
 
 urlpatterns = [
     path('', include('login.urls')),
     path('sales', include('app1.urls')),
     path('admin/', admin.site.urls),
+    path('login/',user_view.login, name='login'),
+    path('logout',auth.LogoutView.as_view(template_name='landing_page.html'), name='logout'),
+    path('register',user_view.register, name='register')
+
     
 ]
 

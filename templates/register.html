@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
   <title>Register</title>
   <meta charset="utf-8">
@@ -14,62 +15,65 @@
       color: ghostwhite;
     }
 
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
 
-  h1 {
-    text-align: center;
-  }
-
+    h1 {
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
   <img src="{% static '/images/logo1.png' %}" alt="greenvasa logo" style="width:20%;">
   <h1> Enter the Details </h1>
 
   <div class="" style="margin-left: 35vw; margin-right: 35vw;">
 
-  <form action="/action_page.php" style="background-color:#054D41; border: 3px solid #087D69; border-radius: 10px; padding: 10px; ">
-     <div class='mb-3'>
-    <label for='firstname' class="form-label">First Name:</label>
-    <input type='text' class="form-control" id='fname' placeholder="Enter first name" name='fname'>
+    <form action="" method="post"
+      style="background-color:#054D41; border: 3px solid #087D69; border-radius: 10px; padding: 10px; ">
+      {% csrf_token %}
+      <div class='mb-3'>
+        <label for='firstname' class="form-label">First Name:</label>
+        <input type='text' class="form-control" id='fname' placeholder="Enter first name" name='fname'>
+      </div>
+      <div class='mb-3'>
+        <label for='lastname' class="form-label">Last Name:</label>
+        <input type='text' class="form-control" id='lname' placeholder="Enter last name" name='lname'>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class='mb-3'>
+        <label for='phone' class="form-label">Phone No:</label>
+        <input type='tel' class="form-control" id='phno' placeholder="Enter Phone Number" name='phno'>
+      </div>
+      <div class="mb-3">
+        <label for="pwd" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      </div>
+      <div class="mb-3">
+        <label for="pwd" class="form-label">Confirm Password:</label>
+        <input type="password" class="form-control" id="cpwd" placeholder="Enter password" name="pswd2">
+      </div>
+      <div class="form-check mb-3">
+        <label class="form-check-label">
+          <a href="http://127.0.0.1:8000/login">Already have an account</a>
+          <button type="submit" class="btn btn-success" style="margin-left :55px;">Sign Up</button><br />
+        </label>
+      </div>
+    </form>
   </div>
-  <div class='mb-3'>
-    <label for='lastname' class="form-label">Last Name:</label>
-    <input type='text' class="form-control" id='fname' placeholder="Enter last name" name='lname'>
-  </div>
-  <div class="mb-3 mt-3">
-    <label for="email" class="form-label">Email:</label>
-    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-  </div>
-   <div class='mb-3'>
-    <label for='phone' class="form-label">Phone No:</label>
-    <input type='tel' class="form-control" id='phno' placeholder="Enter Phone Number" name='phno'>
-  </div>
-  <div class="mb-3">
-    <label for="pwd" class="form-label">Password:</label>
-    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-  </div>
-  <div class="mb-3">
-    <label for="pwd" class="form-label">Confirm Password:</label>
-    <input type="password" class="form-control" id="cpwd" placeholder="Enter password" name="pswd">
-  </div>
-  <div class="form-check mb-3">
-    <label class="form-check-label">
-    <a href="http://127.0.0.1:8000/login">Already have an account</a>
-    <button type="submit" class="btn btn-success" style="margin-left :55px;">Sign Up</button><br/>
-    </label>
-  </div>
-  </form>
-  </div>
-<footer>
-  <div style="color: #054D41 ;">
-  <h1> whcowurbfwriufnwofinwufwrufnwirunfnwiuufiuwr</h1>
-</div>
-</footer>
+  <footer>
+    <div style="color: #054D41 ;">
+      <h1> whcowurbfwriufnwofinwufwrufnwirunfnwiuufiuwr</h1>
+    </div>
+  </footer>
 </body>
+
 </html>
