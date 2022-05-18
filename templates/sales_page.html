@@ -86,57 +86,61 @@
         <hr class="d-sm-none">
       </div>
 
+      
       <div class="col-sm-8">
-        <h2>POST YOUR AD HERE</h2>
-        <h4>Select category: </h4>
-        <select class="rounded" name="category" id="category"
-          style="height: 35px; border: none; background-color: rgb(224, 230, 230);">
-          <option value="Mobile">Mobile</option>
-          <option value="Laptops">Laptops</option>
-          <option value="clothes">clothes</option>
-          <option value="automobiles">automobiles</option>
-          <option value="hobbies">hobbies</option>
-        </select>
+        <form method = "POST">
+          {% csrf_token %}
+          <h2>POST YOUR AD HERE</h2>
+          <h4>Select category: </h4>
+          <select class="rounded" name="category" id="category"
+            style="height: 35px; border: none; background-color: rgb(224, 230, 230);">
+            <option value="Mobile">Mobile</option>
+            <option value="Laptops">Laptops</option>
+            <option value="clothes">clothes</option>
+            <option value="automobiles">automobiles</option>
+            <option value="hobbies">hobbies</option>
+          </select>
 
-        <hr>
+          <hr>
 
-        <div class="mb-3">
-          <h4>Add some details</h4>
-          <label for="Brandname" class="form-label">Brand Name</label>
-          <input class="form-control" type="text" id="Brandname">
-        </div>
+          <div class="mb-3">
+            <h4>Add some details</h4>
+            <label for="Brandname" class="form-label">Brand Name</label>
+            <input class="form-control" type="text" name="Brandname" id="Brandname" >
+          </div>
 
-        <div class="mb-3">
-          <label for="adtitle" class="form-label">Ad Title</label>
-          <input class="form-control" type="text" id="adtitle">
-        </div>
+          <div class="mb-3">
+            <label for="adtitle" class="form-label">Ad Title</label>
+            <input class="form-control" type="text" name="adtitle" id="adtitle">
+          </div>
 
-        <div class="mb-3">
-          <label for="description" class="form-label">Description</label>
-          <textarea class="form-control" id="description" rows="3"></textarea>
-        </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+          </div>
 
-        <hr>
+          <hr>
 
-        <div cladd="mb-3">
-          <h4>Enter a Price</h4>
-          <label for="price" class="form-label">Price</label>
-          <span>&#8377;
-            <input class="form-control" type="number" min="0.00" max="100000000.00" id="price">
-          </span>
-        </div>
+          <div cladd="mb-3">
+            <h4>Enter a Price</h4>
+            <label for="price" class="form-label">Price</label>
+            <span>&#8377;
+              <input class="form-control" type="number" min="0.00" max="100000000.00" name="price" id="price">
+            </span>
+          </div>
 
-        <hr>
+          <hr>
 
-        <div class="mb-3">
-          <h4> Upload upto 9 Photos</h4>
-          <label for="pictureupload" class="form-label">Upload Pictures</label>
-          <input class="form-control" type="file" id="pictureupload" accept="image/*" multiple>
-
-        </div>
+          <div class="mb-3">
+            <h4> Upload upto 9 Photos</h4>
+            <label for="pictureupload" class="form-label">Upload Pictures</label>
+            <input class="form-control" type="file" name="pictureupload" id="pictureupload" accept="image/*" multiple>
+          </div>
+          <button type="submit" class="btn btn-success" >submit</button><br/>
+        </form>
+        <footer></footer>
       </div>
     </div>
   </div>
-</body>
-
-</html>
+  </body>
+  </html>
