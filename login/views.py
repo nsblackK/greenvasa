@@ -23,14 +23,19 @@ def login(request):
         Email = request.POST.get('email')  
         Password = request.POST.get('pswd')  
         print(Email)
+        print(Password)
 
         try:
+          print("Tried the try Block")
           user= Register.objects.get(Email=Email,pwd=Password)
+          print('Entered into try')
           if user is not None:
             print("user exists")
             return render(request,'sales_page.html')
         except Exception as identifier:
+          
           print("user does not exist")
+          return HttpResponse("Email or password is incorrect")
     #     form = AuthenticationForm(request, request.POST)
     #     if form.is_valid():
     #         username = form.cleaned_data.get('email')
